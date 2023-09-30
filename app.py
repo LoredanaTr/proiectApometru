@@ -43,7 +43,11 @@ def run_app():
             print(f"Valoarea indexului pentru contorul de apa calda este {contor_apa_calda.index_apa_calda}") #la fel se face si ptr apa rece
 
         elif optiune == "2":  #adaugam o citire noua ptr apa  rece
-            an_luna = input("Introduceți valoarea contorului pentru apa rece: ") # la fel linia 40 -- 43
+            apa_rece = int(input("Introduceți valoarea contorului de apă rece: "))
+            contor_apa_rece.citire(apa_rece)
+            print(f"Pentru anul {an_curent} si luna {luna_curenta}: ")
+            print(f"Valoarea indexului pentru contorul de apa rece este {contor_apa_rece.index_apa_rece}")  # la fel se face si ptr apa rece
+
 
 
         elif optiune == "3":  # afisam consumul
@@ -59,7 +63,6 @@ def run_app():
 
         else:
             print("Opțiune invalidă. Vă rugăm să selectați o opțiune validă.")
-
 
 if __name__ == '__main__':
    run_app()
